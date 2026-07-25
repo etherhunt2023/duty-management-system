@@ -1,0 +1,53 @@
+name: duty_management_system
+description: An enterprise-grade Duty Management System with Supabase, OCR, and Offline support.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.3.6
+  riverpod: ^2.3.6
+
+  # Supabase Integration
+  supabase_flutter: ^1.10.2
+
+  # Database / Caching for Offline Support
+  sqflite: ^2.3.0
+  shared_preferences: ^2.2.0
+
+  # Text Recognition & OCR
+  google_mlkit_text_recognition: ^0.10.0
+  file_picker: ^6.1.1
+  image_picker: ^1.0.4
+
+  # UI / Charts / Styling
+  fl_chart: ^0.63.0
+  google_fonts: ^5.1.0
+  intl: ^0.18.1
+  font_awesome_flutter: ^10.5.0
+
+  # File Exporters & Viewers
+  pdf: ^3.10.4
+  excel: ^4.0.2
+  path_provider: ^2.1.1
+  share_plus: ^7.1.0
+  open_file_binary: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/

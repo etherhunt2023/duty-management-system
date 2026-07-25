@@ -1,0 +1,53 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate.sh
+
+# IntelliJ Related
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea/workspace.xml
+
+# Visual Studio Code Related
+.vscode/
+.history/
+
+# Flutter / Dart Related
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+# Android Related
+/android/key.properties
+*.apk
+*.ap_
+*.dex
+*.class
+**/AndroidManifest.xml.g3
+/android/app/local.properties
+/android/app/libs/
+/android/app/build/
+
+# Web Related
+/web/node_modules/
+/web/.dart_tool/
+/web/build/
+
+# SQLite Cache
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
