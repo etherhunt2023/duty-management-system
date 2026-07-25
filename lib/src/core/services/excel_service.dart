@@ -20,8 +20,8 @@ class ExcelService {
     // Header cells styling
     final CellStyle headerStyle = CellStyle(
       bold: true,
-      fontColorHex: '#FFFFFF',
-      backgroundColorHex: '#0F52BA',
+      fontColorHex: ExcelColor.white,
+      backgroundColorHex: ExcelColor.fromHexString('FF0F52BA'),
       fontFamily: getFontFamily(FontFamily.Calibri),
     );
 
@@ -40,7 +40,7 @@ class ExcelService {
 
     for (int col = 0; col < headers.length; col++) {
       final cell = sheet.cell(CellIndex.indexByColumnRow(columnIndex: col, rowIndex: 0));
-      cell.value = headers[col];
+      cell.value = TextCellValue(headers[col]);
       cell.cellStyle = headerStyle;
     }
 
@@ -61,7 +61,7 @@ class ExcelService {
 
       for (int col = 0; col < values.length; col++) {
         final cell = sheet.cell(CellIndex.indexByColumnRow(columnIndex: col, rowIndex: row + 1));
-        cell.value = values[col];
+        cell.value = TextCellValue(values[col]);
       }
     }
 

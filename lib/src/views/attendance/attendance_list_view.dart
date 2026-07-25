@@ -188,7 +188,7 @@ class _AttendanceListViewState extends ConsumerState<AttendanceListView> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.between,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       'Log Sheet: $dateStr',
@@ -229,7 +229,7 @@ class _AttendanceListViewState extends ConsumerState<AttendanceListView> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.between,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
                                   att.employeeName,

@@ -56,7 +56,7 @@ class PdfService {
       crossAxisAlignment: pw.CrossAxisAlignment.start,
       children: [
         pw.Row(
-          mainAxisAlignment: pw.MainAxisAlignment.between,
+          mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
           children: [
             pw.Text(
               'DUTY MANAGEMENT SYSTEM',
@@ -121,7 +121,7 @@ class PdfService {
       children: [
         pw.Divider(thickness: 1, color: PdfColors.grey300),
         pw.Row(
-          mainAxisAlignment: pw.MainAxisAlignment.between,
+          mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
           children: [
             pw.Text('Report created by HRMS Administrator System.', style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey)),
             pw.Text('Page 1 of 1', style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey)),

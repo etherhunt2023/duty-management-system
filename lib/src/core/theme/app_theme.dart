@@ -25,7 +25,7 @@ class AppTheme {
         surface: Colors.white,
       ),
       scaffoldBackgroundColor: lightBackground,
-      cardTheme: const CardTheme(
+      cardTheme: const CardThemeData(
         color: Colors.white,
         elevation: 1,
         margin: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
@@ -77,7 +77,7 @@ class AppTheme {
         surface: darkCardColor,
       ),
       scaffoldBackgroundColor: darkBackground,
-      cardTheme: const CardTheme(
+      cardTheme: const CardThemeData(
         color: darkCardColor,
         elevation: 2,
         margin: EdgeInsets.symmetric(vertical: 6, horizontal: 12),

@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
 
 // Provider to check if Supabase is initialized
 final supabaseInitializedProvider = Provider<bool>((ref) => false);
@@ -57,15 +57,16 @@ class SupabaseService {
       return []; // In offline simulation, local_db_service handles database queries
     }
     
-    var query = _client!.from(table).select(columns);
+    var selectQuery = _client!.from(table).select(columns);
     if (match != null) {
-      query = query.match(match);
+      selectQuery = selectQuery.match(match);
     }
     if (orderCol != null) {
-      query = query.order(orderCol, ascending: ascending);
+      final response = await selectQuery.order(orderCol, ascending: ascending);
+      return List<Map<String, dynamic>>.from(response);
     }
     
-    final response = await query;
+    final response = await selectQuery;
     return List<Map<String, dynamic>>.from(response);
   }
 

@@ -169,7 +169,7 @@ class LeaveListView extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.between,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       '${app.leaveTypeCode} Request - $dur ${dur == 1 ? "Day" : "Days"}',

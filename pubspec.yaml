@@ -25,14 +25,14 @@ dependencies:
   shared_preferences: ^2.2.0
 
   # Text Recognition & OCR
-  google_mlkit_text_recognition: ^0.10.0
-  file_picker: ^6.1.1
+  google_mlkit_text_recognition: any
+  file_picker: any
   image_picker: ^1.0.4
 
   # UI / Charts / Styling
   fl_chart: ^0.63.0
-  google_fonts: ^5.1.0
-  intl: ^0.18.1
+  google_fonts: any
+  intl: any
   font_awesome_flutter: ^10.5.0
 
   # File Exporters & Viewers
@@ -40,7 +40,7 @@ dependencies:
   excel: ^4.0.2
   path_provider: ^2.1.1
   share_plus: ^7.1.0
-  open_file_binary: ^4.0.0
+  open_file: ^3.3.0
 
 dev_dependencies:
   flutter_test:

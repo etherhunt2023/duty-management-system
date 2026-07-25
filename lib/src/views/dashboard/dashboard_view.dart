@@ -142,7 +142,7 @@ class DashboardHomeView extends ConsumerWidget {
               children: [
                 // Top Header welcome
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.between,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -294,7 +294,7 @@ class DashboardHomeView extends ConsumerWidget {
                                   final hol = stats.upcomingHolidays[index];
                                   final type = hol['type']?.toString().toUpperCase() ?? 'HOLIDAY';
                                   return Row(
-                                    mainAxisAlignment: MainAxisAlignment.between,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
                                       Expanded(
                                         child: Column(
@@ -359,7 +359,7 @@ class DashboardHomeView extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.between,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   title,

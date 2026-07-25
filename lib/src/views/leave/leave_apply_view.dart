@@ -43,7 +43,7 @@ class _LeaveApplyViewState extends ConsumerState<LeaveApplyView> {
   }
 
   Future<void> _pickAttachment() async {
-    final result = await FilePicker.platform.pickFiles(
+    final result = await FilePicker.pickFiles(
       type: FileType.custom,
       allowedExtensions: ['pdf', 'jpg', 'png', 'jpeg'],
     );

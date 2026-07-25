@@ -52,7 +52,7 @@ class _OcrUploadViewState extends ConsumerState<OcrUploadView> {
         file = File(picked.path);
       }
     } else {
-      final result = await FilePicker.platform.pickFiles(
+      final result = await FilePicker.pickFiles(
         type: FileType.custom,
         allowedExtensions: ['jpg', 'png', 'jpeg', 'pdf'],
       );
@@ -182,7 +182,7 @@ class _OcrUploadViewState extends ConsumerState<OcrUploadView> {
                           const Text(
                             'Upload a photo of the physical register sheet, a scanned PDF, or take a picture using the device camera.',
                             style: TextStyle(color: Colors.grey, fontSize: 13),
-                            textAlign: Center,
+                            textAlign: TextAlign.center,
                           ),
                           const SizedBox(height: 24),
                           Row(
@@ -216,7 +216,7 @@ class _OcrUploadViewState extends ConsumerState<OcrUploadView> {
                   if (_parsedRecords.isNotEmpty) ...[
                     const SizedBox(height: 32),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.between,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           'Parsed Logs: ${_parsedRecords.length} rows',
