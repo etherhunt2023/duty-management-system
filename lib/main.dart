@@ -17,11 +17,11 @@ void main() async {
     // Read from environment variables, or fallback to default environment variables if passed at build-time
     const supabaseUrl = String.fromEnvironment(
       'SUPABASE_URL',
-      defaultValue: 'https://placeholder-url.supabase.co',
+      defaultValue: 'https://ceajytunbnykspknwyir.supabase.co',
     );
     const supabaseAnonKey = String.fromEnvironment(
       'SUPABASE_ANON_KEY',
-      defaultValue: 'placeholder-anon-key',
+      defaultValue: 'sb_publishable_Bl19ZqeFaKjrtuD8EwmbcQ_FnuyCnyd',
     );
     
     if (supabaseUrl != 'https://placeholder-url.supabase.co' && supabaseAnonKey != 'placeholder-anon-key') {
