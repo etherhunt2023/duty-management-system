@@ -59,7 +59,7 @@ class SupabaseService {
     
     var selectQuery = _client!.from(table).select(columns);
     if (match != null) {
-      selectQuery = selectQuery.match(match);
+      selectQuery = selectQuery.match(Map<String, Object>.from(match));
     }
     if (orderCol != null) {
       final response = await selectQuery.order(orderCol, ascending: ascending);
@@ -91,7 +91,7 @@ class SupabaseService {
     if (!isOnline) {
       return [];
     }
-    final response = await _client!.from(table).update(values).match(match).select();
+    final response = await _client!.from(table).update(values).match(Map<String, Object>.from(match)).select();
     return List<Map<String, dynamic>>.from(response);
   }
 
@@ -101,7 +101,7 @@ class SupabaseService {
     required Map<String, dynamic> match,
   }) async {
     if (isOnline) {
-      await _client!.from(table).delete().match(match);
+      await _client!.from(table).delete().match(Map<String, Object>.from(match));
     }
   }
 }
