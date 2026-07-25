@@ -10,6 +10,11 @@ if (-not (Test-Path $flutterPath)) {
 }
 
 Write-Host "============================================="
+Write-Host "0. Cleaning build caches"
+Write-Host "============================================="
+& $flutterPath clean
+
+Write-Host "============================================="
 Write-Host "1. Initializing Flutter Native Project Wrappers"
 Write-Host "============================================="
 # Run flutter create to generate android/ and web/ directories without overwriting our lib/ and pubspec.yaml
